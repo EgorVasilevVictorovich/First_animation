@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:autoTransition="animateToEnd"
+        motion:constraintSetEnd="@+id/end"
+        motion:constraintSetStart="@id/start"
+        motion:duration="5000">
+       <KeyFrameSet>
+       </KeyFrameSet>
+    </Transition>
+       <Transition
+           motion:autoTransition="animateToEnd"
+           motion:constraintSetEnd="@+id/start"
+           motion:constraintSetStart="@id/end"
+           motion:duration="5000"/>
+    <ConstraintSet android:id="@+id/start">
+        <Constraint
+            android:id="@+id/flip"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="159dp"
+            android:layout_height="157dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintVertical_bias="0.912"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintStart_toStartOf="parent" />
+        <Constraint
+            android:id="@+id/imageView3"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="67dp"
+            android:layout_height="72dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintVertical_bias="0.52"
+            motion:layout_constraintHorizontal_bias="0.072"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintStart_toStartOf="parent" />
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint
+            motion:layout_constraintVertical_bias="0.027"
+            android:layout_height="157dp"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintHorizontal_bias="1.0"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="159dp"
+            android:id="@+id/flip" />
+        <Constraint
+            motion:layout_constraintVertical_bias="0.766"
+            android:layout_height="72dp"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintHorizontal_bias="0.909"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="67dp"
+            android:id="@+id/imageView3" />
+    </ConstraintSet>
+</MotionScene>
